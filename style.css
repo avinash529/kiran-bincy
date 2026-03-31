@@ -129,6 +129,16 @@ footer{padding:3rem 2rem;background:#080503;text-align:center;position:relative;
 .foot-dev-link{color:var(--gold2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(200,169,110,.4);transition:color .3s,text-decoration-color .3s;cursor:pointer;pointer-events:auto;}
 .foot-dev-link:hover{color:var(--gold3);text-decoration-color:var(--gold);}
 
+/* MOBILE: hide custom cursor on touch/phone screens */
+@media(max-width:768px){
+  body{cursor:auto;}
+  .cursor,.cursor-ring{display:none;}
+  .rsvp-btn{cursor:pointer;}
+  .ev-location{cursor:pointer;}
+  .foot-dev-link{cursor:pointer;}
+  .contact-link{cursor:pointer;}
+}
+
 /* KEYFRAMES */
 @keyframes gradMove{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
 @keyframes lineGrow{0%{transform:scaleY(0);opacity:1;}50%{transform:scaleY(1);opacity:1;}100%{transform:scaleY(1);opacity:0;}}
