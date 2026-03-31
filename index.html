@@ -1,184 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kiran &amp; Bincy — Forever Begins</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Jost:wght@100;200;300;400&display=swap" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiran &amp; Bincy — Forever Begins</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&family=Jost:wght@100;200;300;400&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-<div class="noise"></div>
-<div class="cursor" id="cur"></div>
-<div class="cursor-ring" id="curRing"></div>
+  <div class="noise"></div>
+  <div class="cursor" id="cur"></div>
+  <div class="cursor-ring" id="curRing"></div>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-name">Kiran &amp; Bincy</div>
-  <div class="loader-bar" id="loaderBar"></div>
-</div>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-name">Kiran &amp; Bincy</div>
+    <div class="loader-bar" id="loaderBar"></div>
+  </div>
 
-<canvas id="stars"></canvas>
+  <canvas id="stars"></canvas>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-vignette"></div>
-  <div class="ring ring-1"><div class="ring-dot"></div></div>
-  <div class="ring ring-2"><div class="ring-dot ring-dot-rose" style="top:auto;bottom:-3px;left:30%;"></div></div>
-  <div class="ring ring-3"></div>
-  <div class="hero-inner" id="heroInner">
-    <div id="hKiran" class="hero-name">Kiran</div>
-    <div id="hAmp" class="hero-amp">&amp;</div>
-    <div id="hBincy" class="hero-name">Bincy</div>
-    <div class="hero-date-block" id="hDate">
-      <div><div class="hero-date-num">17</div><div class="hero-date-month">May</div></div>
-      <div class="hero-date-sep"><span></span><div class="hero-date-month" style="transform:rotate(90deg);font-size:.45rem;">2026</div><span></span></div>
-      <div><div class="hero-date-year">Sunday</div></div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-vignette"></div>
+    <div class="ring ring-1">
+      <div class="ring-dot"></div>
     </div>
-  </div>
-  <div class="scroll-cue" id="scrollCue">
-    <div class="scroll-cue-text">Scroll</div>
-    <div class="scroll-cue-line"></div>
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<div class="cd-wrap">
-  <span class="sec-tag g0" data-reveal="fade">Counting Down</span>
-  <h2 class="sec-title g0" data-reveal="fade">Days Until Forever</h2>
-  <p class="sec-sub g0" data-reveal="fade">Wedding &middot; 17 May 2026</p>
-  <div class="cd-grid">
-    <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdD">--</span><p class="cd-unit">Days</p></div>
-    <div class="cd-colon g0" data-reveal="up">:</div>
-    <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdH">--</span><p class="cd-unit">Hours</p></div>
-    <div class="cd-colon g0" data-reveal="up">:</div>
-    <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdM">--</span><p class="cd-unit">Minutes</p></div>
-    <div class="cd-colon g0" data-reveal="up">:</div>
-    <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdS">--</span><p class="cd-unit">Seconds</p></div>
-  </div>
-</div>
-
-<!-- EVENTS -->
-<section>
-  <div class="ev-wrap">
-    <span class="sec-tag g0" data-reveal="fade">Save the Date</span>
-    <h2 class="sec-title g0" data-reveal="fade">Our Celebrations</h2>
-    <p class="sec-sub g0" data-reveal="fade">Two beautiful moments, one eternal story</p>
-    <div class="ev-grid">
-      <div class="ev-card g0" data-reveal="left">
-        <div class="ev-number">01</div>
-        <p class="ev-tag">9 &middot; May &middot; 2026</p>
-        <h3 class="ev-name">Engagement<br/>Ceremony</h3>
-        <div class="ev-date-big">Friday</div>
-        <p class="ev-weekday">9th May 2026</p>
-        <p class="ev-desc">Rings exchanged, hearts bound, blessed by the love of our families — the beginning of forever.</p>
-        <a class="ev-location" href="https://www.google.com/maps/search/Kattapana,+Idukki,+Kerala" target="_blank" rel="noopener">&#x1F4CD; Kattapana, Idukki, Kerala</a>
-      </div>
-      <div class="ev-card g0" data-reveal="right">
-        <div class="ev-number">02</div>
-        <p class="ev-tag">17 &middot; May &middot; 2026</p>
-        <h3 class="ev-name">Wedding<br/>Ceremony</h3>
-        <div class="ev-date-big">Sunday</div>
-        <p class="ev-weekday">17th May 2026</p>
-        <p class="ev-desc">We joyfully invite you to witness our union and celebrate the dawn of our forever, together.</p>
-        <a class="ev-location" href="https://www.google.com/maps/search/Mala,+Thrissur,+Kerala" target="_blank" rel="noopener">&#x1F4CD; Mala, Thrissur, Kerala</a>
-      </div>
+    <div class="ring ring-2">
+      <div class="ring-dot ring-dot-rose" style="top:auto;bottom:-3px;left:30%;"></div>
     </div>
-  </div>
-</section>
-
-<!-- STORY -->
-<section class="story-wrap">
-  <div class="story-bg-text" id="storyBg">Forever</div>
-  <div class="story-inner">
-    <span class="sec-tag g0" data-reveal="fade">A Love Story</span>
-    <h2 class="sec-title g0" data-reveal="fade">Written in the Stars</h2>
-    <div class="chapter g0" data-reveal="fade" style="margin:2rem 0;">
-      <div class="ch-line ch-l"></div><div class="ch-icon">&#x2726;</div><div class="ch-line ch-r"></div>
-    </div>
-    <p class="story-quote g0" data-reveal="up">In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.</p>
-    <p class="story-body g0" data-reveal="up">With immense joy and the warmest of hearts, we — Kiran and Bincy — invite you to witness and celebrate our union. Your laughter, your blessings, and your presence are the greatest gift you can give us as we step into this beautiful new chapter of our lives together.</p>
-    <div class="chapter g0" data-reveal="fade" style="margin:3rem 0 0;">
-      <div class="ch-line ch-l"></div><div class="ch-icon">&#x2661;</div><div class="ch-line ch-r"></div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section>
-  <div class="tl-wrap">
-    <span class="sec-tag g0" data-reveal="fade">The Day's Journey</span>
-    <h2 class="sec-title g0" data-reveal="fade">A Day to Remember</h2>
-    <p class="sec-sub g0" data-reveal="fade">Every moment, perfectly planned</p>
-
-    <div class="timeline">
-
-      <div class="tl-entry g0" data-reveal="up">
-        <div class="tl-marker"><div class="tl-dot"></div></div>
-        <div class="tl-card">
-          <p class="tl-time">9 May &middot; Morning</p>
-          <p class="tl-ename">&#x1F48D; Engagement Ceremony</p>
-          <p class="tl-desc">Rings exchanged, families united, a beautiful beginning.</p>
+    <div class="ring ring-3"></div>
+    <div class="hero-inner" id="heroInner">
+      <div id="hKiran" class="hero-name">Kiran</div>
+      <div id="hAmp" class="hero-amp">&amp;</div>
+      <div id="hBincy" class="hero-name">Bincy</div>
+      <div class="hero-date-block" id="hDate">
+        <div>
+          <div class="hero-date-num">17</div>
+          <div class="hero-date-month">May</div>
+        </div>
+        <div class="hero-date-sep"><span></span>
+          <div class="hero-date-month" style="transform:rotate(90deg);font-size:.45rem;">2026</div><span></span>
+        </div>
+        <div>
+          <div class="hero-date-year">Sunday</div>
         </div>
       </div>
+    </div>
+    <div class="scroll-cue" id="scrollCue">
+      <div class="scroll-cue-text">Scroll</div>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </section>
 
-      <div class="tl-entry g0" data-reveal="up">
-        <div class="tl-marker"><div class="tl-dot tl-dot-rose"></div></div>
-        <div class="tl-card">
-          <p class="tl-time">17 May &middot; Morning</p>
-          <p class="tl-ename">&#x1F338; Wedding Rituals</p>
-          <p class="tl-desc">Sacred ceremonies, ancient blessings, eternal vows.</p>
-        </div>
+  <!-- COUNTDOWN -->
+  <div class="cd-wrap">
+    <span class="sec-tag g0" data-reveal="fade">Counting Down</span>
+    <h2 class="sec-title g0" data-reveal="fade">Days Until Forever</h2>
+    <p class="sec-sub g0" data-reveal="fade">Wedding &middot; 17 May 2026</p>
+    <div class="cd-grid">
+      <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdD">--</span>
+        <p class="cd-unit">Days</p>
       </div>
-
-      <div class="tl-entry g0" data-reveal="up">
-        <div class="tl-marker"><div class="tl-dot"></div></div>
-        <div class="tl-card">
-          <p class="tl-time">17 May &middot; Afternoon</p>
-          <p class="tl-ename">&#x1F38A; Reception</p>
-          <p class="tl-desc">Celebrate with us &mdash; food, joy, and cherished moments.</p>
-        </div>
+      <div class="cd-colon g0" data-reveal="up">:</div>
+      <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdH">--</span>
+        <p class="cd-unit">Hours</p>
       </div>
-
-      <div class="tl-entry tl-entry-last g0" data-reveal="up">
-        <div class="tl-marker"><div class="tl-dot tl-dot-rose"></div></div>
-        <div class="tl-card">
-          <p class="tl-time">17 May &middot; Evening</p>
-          <p class="tl-ename">&#x1F942; Dinner &amp; Celebration</p>
-          <p class="tl-desc">An evening of laughter, love, and lifelong memories.</p>
-        </div>
+      <div class="cd-colon g0" data-reveal="up">:</div>
+      <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdM">--</span>
+        <p class="cd-unit">Minutes</p>
       </div>
-
+      <div class="cd-colon g0" data-reveal="up">:</div>
+      <div class="cd-box g0" data-reveal="up"><span class="cd-num" id="cdS">--</span>
+        <p class="cd-unit">Seconds</p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- RSVP -->
-<section class="rsvp-wrap">
-  <div class="rsvp-ring" style="width:300px;height:300px;"></div>
-  <div class="rsvp-ring" style="width:500px;height:500px;"></div>
-  <div class="rsvp-ring" style="width:700px;height:700px;"></div>
-  <div class="rsvp-inner">
-    <span class="sec-tag g0" data-reveal="fade">You're Invited</span>
-    <h2 class="sec-title g0" data-reveal="fade">Will You Join Us?</h2>
-    <div class="chapter g0" data-reveal="fade" style="margin:2rem 0 3rem;">
-      <div class="ch-line ch-l" style="background:linear-gradient(90deg,transparent,rgba(200,169,110,.3));"></div>
-      <div class="ch-icon">&#x2726;</div>
-      <div class="ch-line ch-r" style="background:linear-gradient(90deg,rgba(200,169,110,.3),transparent);"></div>
+  <!-- EVENTS -->
+  <section>
+    <div class="ev-wrap">
+      <span class="sec-tag g0" data-reveal="fade">Save the Date</span>
+      <h2 class="sec-title g0" data-reveal="fade">Our Celebrations</h2>
+      <p class="sec-sub g0" data-reveal="fade">Two beautiful moments, one eternal story</p>
+      <div class="ev-grid">
+        <div class="ev-card g0" data-reveal="left">
+          <div class="ev-number">01</div>
+          <p class="ev-tag">9 &middot; May &middot; 2026</p>
+          <h3 class="ev-name">Engagement<br />Ceremony</h3>
+          <div class="ev-date-big">Friday</div>
+          <p class="ev-weekday">9th May 2026</p>
+          <p class="ev-desc">Rings exchanged, hearts bound, blessed by the love of our families — the beginning of
+            forever.</p>
+          <a class="ev-location" href="https://www.google.com/maps/search/Kattapana,+Idukki,+Kerala" target="_blank"
+            rel="noopener">&#x1F4CD; Kattapana, Idukki, Kerala</a>
+        </div>
+        <div class="ev-card g0" data-reveal="right">
+          <div class="ev-number">02</div>
+          <p class="ev-tag">17 &middot; May &middot; 2026</p>
+          <h3 class="ev-name">Wedding<br />Ceremony</h3>
+          <div class="ev-date-big">Sunday</div>
+          <p class="ev-weekday">17th May 2026</p>
+          <p class="ev-desc">We joyfully invite you to witness our union and celebrate the dawn of our forever,
+            together.</p>
+          <a class="ev-location" href="https://www.google.com/maps/search/Mala,+Thrissur,+Kerala" target="_blank"
+            rel="noopener">&#x1F4CD; Mala, Thrissur, Kerala</a>
+        </div>
+      </div>
     </div>
-    <p class="rsvp-message g0" data-reveal="up">Your presence is the greatest gift you could give us.<br/>Please let us know you're joining our celebration.</p>
-    <p class="rsvp-deadline g0" data-reveal="fade">Kindly respond by &middot; 1st May 2026</p>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="foot-name">Kiran &amp; Bincy</div>
-  <p class="foot-note">17 &middot; 05 &middot; 2026 &nbsp;&middot;&nbsp; Forever Begins</p>
-</footer>
+  <!-- STORY -->
+  <section class="story-wrap">
+    <div class="story-bg-text" id="storyBg">Forever</div>
+    <div class="story-inner">
+      <span class="sec-tag g0" data-reveal="fade">A Love Story</span>
+      <h2 class="sec-title g0" data-reveal="fade">Written in the Stars</h2>
+      <div class="chapter g0" data-reveal="fade" style="margin:2rem 0;">
+        <div class="ch-line ch-l"></div>
+        <div class="ch-icon">&#x2726;</div>
+        <div class="ch-line ch-r"></div>
+      </div>
+      <p class="story-quote g0" data-reveal="up">In all the world, there is no heart for me like yours. In all the
+        world, there is no love for you like mine.</p>
+      <p class="story-body g0" data-reveal="up">With immense joy and the warmest of hearts, we — Kiran and Bincy —
+        invite you to witness and celebrate our union. Your laughter, your blessings, and your presence are the greatest
+        gift you can give us as we step into this beautiful new chapter of our lives together.</p>
+      <div class="chapter g0" data-reveal="fade" style="margin:3rem 0 0;">
+        <div class="ch-line ch-l"></div>
+        <div class="ch-icon">&#x2661;</div>
+        <div class="ch-line ch-r"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="tl-wrap">
+      <span class="sec-tag g0" data-reveal="fade">The Day's Journey</span>
+      <h2 class="sec-title g0" data-reveal="fade">A Day to Remember</h2>
+      <p class="sec-sub g0" data-reveal="fade">Every moment, perfectly planned</p>
+
+      <div class="timeline">
+
+        <div class="tl-entry g0" data-reveal="up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <p class="tl-time">9 May &middot; Morning</p>
+            <p class="tl-ename">&#x1F48D; Engagement Ceremony</p>
+            <p class="tl-desc">Rings exchanged, families united, a beautiful beginning.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry g0" data-reveal="up">
+          <div class="tl-marker">
+            <div class="tl-dot tl-dot-rose"></div>
+          </div>
+          <div class="tl-card">
+            <p class="tl-time">17 May &middot; Morning</p>
+            <p class="tl-ename">&#x1F338; Wedding Rituals</p>
+            <p class="tl-desc">Sacred ceremonies, ancient blessings, eternal vows.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry g0" data-reveal="up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <p class="tl-time">17 May &middot; Afternoon</p>
+            <p class="tl-ename">&#x1F38A; Reception</p>
+            <p class="tl-desc">Celebrate with us &mdash; food, joy, and cherished moments.</p>
+          </div>
+        </div>
+
+        <div class="tl-entry tl-entry-last g0" data-reveal="up">
+          <div class="tl-marker">
+            <div class="tl-dot tl-dot-rose"></div>
+          </div>
+          <div class="tl-card">
+            <p class="tl-time">17 May &middot; Evening</p>
+            <p class="tl-ename">&#x1F942; Dinner &amp; Celebration</p>
+            <p class="tl-desc">An evening of laughter, love, and lifelong memories.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-wrap">
+    <div class="rsvp-ring" style="width:300px;height:300px;"></div>
+    <div class="rsvp-ring" style="width:500px;height:500px;"></div>
+    <div class="rsvp-ring" style="width:700px;height:700px;"></div>
+    <div class="rsvp-inner">
+      <span class="sec-tag g0" data-reveal="fade">You're Invited</span>
+      <h2 class="sec-title g0" data-reveal="fade">Will You Join Us?</h2>
+      <div class="chapter g0" data-reveal="fade" style="margin:2rem 0 3rem;">
+        <div class="ch-line ch-l" style="background:linear-gradient(90deg,transparent,rgba(200,169,110,.3));"></div>
+        <div class="ch-icon">&#x2726;</div>
+        <div class="ch-line ch-r" style="background:linear-gradient(90deg,rgba(200,169,110,.3),transparent);"></div>
+      </div>
+      <p class="rsvp-message g0" data-reveal="up">Your presence is the greatest gift you could give us.<br/>Please let us know you're joining our celebration.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-name">Kiran &amp; Bincy</div>
+    <p class="foot-note">17 &middot; 05 &middot; 2026 &nbsp;&middot;&nbsp; Forever Begins</p>
+    <p class="foot-dev">
+      Developer &nbsp;&middot;&nbsp; <strong style="color:var(--gold2);">Avinash R</strong><br/>
+      &#x1F4AC; <a href="https://wa.me/917025523228" class="foot-dev-link" target="_blank" rel="noopener noreferrer" id="dev-wa">+91 70255 23228</a>
+      &nbsp;&middot;&nbsp;
+      &#x2709; <a href="mailto:aviz.raju@gmail.com" class="foot-dev-link" id="dev-mail1">aviz.raju@gmail.com</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:mailpersonal.avinash@gmail.com" class="foot-dev-link" id="dev-mail2">mailpersonal.avinash@gmail.com</a>
+    </p>
+  </footer>
 
 </body>
+
 </html>

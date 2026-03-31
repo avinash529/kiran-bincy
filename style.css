@@ -68,7 +68,7 @@ section{position:relative;z-index:2;}
 @media(max-width:640px){.ev-grid{grid-template-columns:1fr;}}
 .ev-card{position:relative;overflow:hidden;padding:4rem 3rem;background:rgba(255,255,255,.02);border:1px solid rgba(200,169,110,.12);will-change:transform;transition:border-color .4s;}
 .ev-card:hover{border-color:rgba(200,169,110,.3);}
-.ev-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,.06) 0%,transparent 60%);opacity:0;transition:opacity .5s;}
+.ev-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,.06) 0%,transparent 60%);opacity:0;transition:opacity .5s;pointer-events:none;}
 .ev-card:hover::after{opacity:1;}
 .ev-number{font-family:'Playfair Display',serif;font-size:7rem;font-weight:400;color:rgba(200,169,110,.05);position:absolute;top:-1rem;right:1rem;line-height:1;pointer-events:none;user-select:none;}
 .ev-tag{font-size:.5rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);opacity:.6;margin-bottom:1.5rem;}
@@ -76,7 +76,7 @@ section{position:relative;z-index:2;}
 .ev-date-big{font-family:'Great Vibes',cursive;font-size:clamp(3rem,6vw,5rem);background:linear-gradient(135deg,var(--gold),var(--rose2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;margin-bottom:.5rem;padding:0.2em 0.3em;margin-top:-0.2em;}
 .ev-weekday{font-size:.6rem;letter-spacing:.3em;color:rgba(200,169,110,.4);text-transform:uppercase;margin-bottom:1.5rem;}
 .ev-desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;color:rgba(253,248,240,.4);line-height:1.9;border-top:1px solid rgba(200,169,110,.12);padding-top:1.2rem;}
-.ev-location{display:inline-block;font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(200,169,110,.55);margin-top:1rem;text-decoration:none;transition:color .3s;}
+.ev-location{display:inline-block;font-family:'Jost',sans-serif;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(200,169,110,.55);margin-top:1rem;text-decoration:none;transition:color .3s;cursor:pointer;pointer-events:auto;position:relative;z-index:2;}
 .ev-location:hover{color:rgba(200,169,110,1);text-decoration:underline;text-underline-offset:3px;}
 
 /* STORY */
@@ -116,10 +116,18 @@ section{position:relative;z-index:2;}
 .rsvp-btn span{position:relative;z-index:1;}
 .rsvp-deadline{font-size:.55rem;letter-spacing:.4em;color:rgba(200,169,110,.3);text-transform:uppercase;margin-top:2rem;}
 
+/* CONTACT LINKS */
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-top:3rem;}
+.contact-link{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;border:1px solid rgba(200,169,110,.6);color:var(--gold2);font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;transition:color .4s,border-color .4s,background .4s,box-shadow .4s;cursor:pointer;pointer-events:auto;background:rgba(200,169,110,.06);box-shadow:0 0 18px rgba(200,169,110,.08);}
+.contact-link:hover{color:var(--ink);border-color:var(--gold);background:var(--gold);box-shadow:0 0 30px rgba(200,169,110,.35);}
+
 /* FOOTER */
 footer{padding:3rem 2rem;background:#080503;text-align:center;position:relative;z-index:2;}
 .foot-name{font-family:'Great Vibes',cursive;font-size:clamp(2.5rem,6vw,4rem);background:linear-gradient(135deg,var(--gold),var(--rose2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding:0.2em 0.3em;margin:-0.2em 0;}
 .foot-note{font-size:.5rem;letter-spacing:.5em;color:rgba(200,169,110,.25);text-transform:uppercase;margin-top:.8rem;}
+.foot-dev{font-size:.65rem;letter-spacing:.3em;color:rgba(200,169,110,.65);text-transform:uppercase;margin-top:1.5rem;border-top:1px solid rgba(200,169,110,.12);padding-top:1.2rem;line-height:2.2;}
+.foot-dev-link{color:var(--gold2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(200,169,110,.4);transition:color .3s,text-decoration-color .3s;cursor:pointer;pointer-events:auto;}
+.foot-dev-link:hover{color:var(--gold3);text-decoration-color:var(--gold);}
 
 /* KEYFRAMES */
 @keyframes gradMove{0%{background-position:0% 50%;}100%{background-position:300% 50%;}}
